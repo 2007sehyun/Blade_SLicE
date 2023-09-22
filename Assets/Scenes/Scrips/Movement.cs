@@ -6,14 +6,14 @@ public class Movement : MonoBehaviour
 {
     [SerializeField]
     private GameObject effectObj;
-    private Rigidbody rigid;
     private Animator ani;
+   /* private Rigidbody rigid;
     private bool isGround;
     private Vector3 move;
-
+*/
     private void Awake()
     {
-        rigid = GetComponent<Rigidbody>();
+        //rigid = GetComponent<Rigidbody>();
         ani = GetComponent<Animator>();
     }
     void Start()
@@ -21,7 +21,7 @@ public class Movement : MonoBehaviour
         StartCoroutine(Sliced());
     }
 
-    void Update()
+    /*void Update()
     {
         
         Move();
@@ -49,11 +49,11 @@ public class Movement : MonoBehaviour
 
         transform.position += move.normalized*Time.deltaTime * 20;
 
-       /* Vector3 horizontal = transform.right * x;
+       *//* Vector3 horizontal = transform.right * x;
         Vector3 vertical = transform.forward * z;
 
         Vector3 _velocity = (horizontal + vertical).normalized * 40;
-        rigid.MovePosition(transform.position+= _velocity * Time.deltaTime);*/
+        rigid.MovePosition(transform.position+= _velocity * Time.deltaTime);*//*
 
     }
 
@@ -77,7 +77,7 @@ public class Movement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
-
+*/
     IEnumerator Sliced()
     {
         while(true)
@@ -95,9 +95,9 @@ public class Movement : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+   /* private void OnCollisionEnter(Collision collision)
     {
         if (collision.transform.CompareTag("Ground"))
             isGround = true;
-    }
+    }*/
 }

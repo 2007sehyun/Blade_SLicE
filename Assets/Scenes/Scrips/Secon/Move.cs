@@ -97,6 +97,8 @@ public class Move : MonoBehaviour
 
 	private void Update()
 	{
+		if (transform.position.y <= -7)
+			transform.position = Vector3.zero;
 		//Input
 		MyInput();
 		//Looking around
@@ -474,7 +476,7 @@ public class Move : MonoBehaviour
 		surfing = false;
 	}
 
-	public Vector3 GetVelocity()
+	/*public Vector3 GetVelocity()
 	{
 		return rb.velocity;
 	}
@@ -502,5 +504,5 @@ public class Move : MonoBehaviour
 	public Rigidbody GetRb()
 	{
 		return rb;
-	}
+	}*/
 }
