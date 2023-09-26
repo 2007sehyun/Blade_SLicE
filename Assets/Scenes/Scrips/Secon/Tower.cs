@@ -5,16 +5,15 @@ using UnityEngine;
 public class Tower : MonoBehaviour
 {
     public Transform player;
-    void Start()
+
+    private void Update()
     {
-        
+        if (Vector3.Distance(transform.position, player.position) < 50)
+        {
+            transform.LookAt(player.position);
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-        transform.  LookAt(player.transform.position);
-
-    }
+    
 }

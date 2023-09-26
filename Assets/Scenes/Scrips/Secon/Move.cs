@@ -97,7 +97,7 @@ public class Move : MonoBehaviour
 
 	private void Update()
 	{
-		if (transform.position.y <= -7)
+		if (transform.position.y <= -100)
 			transform.position = Vector3.zero;
 		//Input
 		MyInput();
